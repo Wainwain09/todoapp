@@ -1,0 +1,200 @@
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #F4512C, #5E1B89);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 600px;
+    margin-bottom: 40px;
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+button {
+    appearance: none;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+button:hover {
+    background: linear-gradient(to bottom right, #F4512C, #5E1B89);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(1.05);
+}
+
+
+.add-btn, .toggle-btn {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+
+.save-btn, .cancel-btn, .edit-btn, .delete-btn {
+    width: auto;
+    min-width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #008cba;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.status-btn {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.status-btn.complete {
+    background-color: #4caf50;
+    color: white;
+}
+
+.status-btn.incomplete {
+    background-color: #ff5722;
+    color: white;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.task-form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.task-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.todo-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+.todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-height: 150px;
+}
+
+.todo-table th, .todo-table td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.todo-table th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.edit-input {
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+.todo-table td.actions {
+    text-align: center;
+}
+
+.todo-table td.actions > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    button {
+        font-size: 1.5rem;
+        padding: .75rem 2rem;
+    }
+}
