@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TodoList({ tasks, updateTask, deleteTask, isCompletedView = false }) {
+function TodoList({ tasks, updateTask, deleteTask, handleSelectTask, selectedTasks, isCompletedView = false }) {
   const [editingTask, setEditingTask] = useState(null);
   const [editedTask, setEditedTask] = useState({});
 
@@ -19,16 +19,25 @@ function TodoList({ tasks, updateTask, deleteTask, isCompletedView = false }) {
       <table className="todo-table">
         <thead>
           <tr>
+            <th>Select</th>
             <th>Task</th>
             <th>Status</th>
             <th>Start Time</th>
             <th>Start Date</th>
-            {!isCompletedView && <th>Actions</th>}
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {tasks.map((task) => (
             <tr key={task.id}>
+              <td>
+                  <input
+                    type="checkbox"
+                    checked={selectedTasks.includes(task.id)}
+                    onChange={() => handleSelectTask(task.id)}
+                    className="task-checkbox"
+                  />
+                </td>
               <td>
                 {editingTask === task.id ? (
                   <input
